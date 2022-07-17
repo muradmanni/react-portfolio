@@ -1,0 +1,377 @@
+/* Global values */
+:root{
+    --bg-color: rgb(162,144,122);
+    --bg: white;
+    --bd-color:#13293d;
+    --link: black;
+}
+
+/* setting up body  */
+body{
+    background-color: var(--bg-color);
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;    
+    flex-direction: column;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.logo-class{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 30px;
+
+}
+
+/* designing the header and the navigation menu */
+header{
+    padding: 0px 20px 0 20px ;
+    position:  relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h2{
+    margin-left:160px;
+    font-size: 35px;
+    margin-bottom: 5px;
+    
+}
+
+header img{
+    transition: 2s;
+}
+
+.logo-img{
+    position: absolute;
+    z-index: 1000; /* to bring that image on top of other element, so when mouse hover event occurs i t can expand and display the image completely*/
+    margin-top: 0;
+    
+}
+/* increasing the size of Avatar on mouse hover */
+header div img:hover{
+    width: 250px;
+    transition: 2s;
+}
+
+nav{
+    margin-top: 20px;
+}
+
+header ul li {
+    
+    display: inline;
+    list-style: none;
+    padding-right: 10px ;
+}
+
+.pa{
+    display:block;
+}
+
+a{
+    text-decoration: none;
+    color: var(--link);
+}
+
+nav ul li:hover{
+    border-bottom: 2px solid;
+    cursor: pointer ;
+
+}
+.relative{
+    position: relative;
+}
+
+.main-image-header{
+    position: relative;
+    text-align: right;
+    padding-right: 20px;
+    top: -100px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.relative{
+    color: var(--bg);
+}
+
+.cover {
+    object-fit: cover;
+    width: 100%;
+    height: 350px;
+}
+
+.space-around{
+    width: 200px;
+    
+    
+}
+
+/* STYLING ABOUT ME SECTION AND ITS CONTENT */
+.section-about-me{
+    display: flex;
+    width: 100%;
+    /*border: 5px solid grey; this was to check while creating*/
+}
+.about-me{
+    flex:1;
+    text-align: right;
+    padding-right: 5px;
+    border-right: 2px solid grey;
+    margin-bottom: 5px;
+}
+
+.about-me h3, .my-work h3, .contact-me h3{
+    font-size: 30px;
+    
+}
+
+.really-about-me{
+    flex: 4;
+    width: 250px;
+    padding-left: 20px;
+    line-height: 2rem;
+}
+
+/* STYLING WORK SECTION AND ITS CONTENT */
+.section-my-work{
+    display: flex;
+    width: 100%;
+    /*border: 5px solid grey; this was to check while creating*/
+}
+.my-work{
+    flex:1;
+    text-align: right;
+    padding-right: 5px;
+    border-right: 2px solid grey;
+    margin-bottom: 5px
+}
+
+.really-my-work{
+    flex: 4;
+    width: 250px;
+    padding-left: 20px;
+    
+}
+
+.work1cover {
+    object-fit: cover;
+    width: 100%;
+    
+}
+
+.project-desc{
+    position: absolute;
+    
+    color: black;
+    padding: 5px;
+    font-size: 50px;
+}
+
+.project-desc2{
+    position: absolute;
+    margin-top: -110px;
+    color: black;
+    padding: 5px;
+    font-size: 50px;
+}
+.project-desc3{
+    position: absolute;
+    margin-top: -110px;
+    color: black;
+    padding: 5px;
+    font-size: 50px;
+}
+
+.multiple-work-screen{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.work1{
+    display: flex;
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 400px;
+    /*border: 5px solid red; this was to check while creating*/
+}
+
+.work1cover:hover{
+    margin-top: -150px;
+    height: 130%;
+    width: 130%;
+    transition: 4s;
+}
+
+.work2{
+    z-index: 1005   ;
+}
+.work3{
+    z-index: 1001;    
+}
+.work2, .work3{
+    
+    margin-right: 10px;   
+}
+
+.work2, .work3{
+    flex-direction: row;
+    flex: 1 ;
+    
+}
+
+/* CONTACT ME */
+.section-contact-me{
+    display: block;
+    display: flex;
+    width: 100%;
+    /*border: 5px solid grey; this was to check while creating*/
+}
+
+.section-contact-me ul li {
+    display: inline;
+    list-style: none;
+    padding-right: 10px ;
+}
+
+.contact-me{
+    flex:1;
+    text-align: right;
+    padding-right: 5px;
+    border-right: 2px solid grey;
+    margin-bottom: 5px
+}
+
+.contact-me-options{
+    flex: 4;
+    width: 250px;
+    padding-left: 20px;
+    line-height: 2rem;
+    text-align: center;
+}
+
+
+.footer-end{
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    /* Use flex-direction to stack the navbar, sidebar, and body */
+
+
+    header,
+    nav {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    nav ul{
+        padding-left: 0;
+
+    }
+    header h2{
+        margin-left:60px;
+    }
+
+    header div img{
+        width: 50px;
+        transition: 2s;
+    }
+
+    header div img:hover{
+        width: 50px;    
+    }
+    header ul li {
+        display: block;
+        list-style: none;
+        padding: 20px;
+    }
+
+    /* Adjusting ABOUT ME section on different screen */
+    .section-about-me{
+        flex-direction: column;
+        
+    }
+    
+    .about-me{
+        flex:1;
+        text-align:center;   
+        padding-right: 5px;
+        border-right: none;
+        border-bottom: 2px solid grey;
+        margin-bottom: 5px;
+    }
+    
+    .really-about-me{
+        width: 99%;
+        padding: 0px 2px;
+        text-align: justify;
+    }
+
+    /* Adjusting WORK section on different screen */
+    .section-my-work{
+        flex-direction: column ;
+    }
+
+    .my-work{
+        text-align:center;   
+          
+        padding-right: 5px;
+        border-right: none;
+        border-bottom: 2px solid grey;
+        margin-bottom: 5px;
+    }
+
+    .multiple-work-screen, .really-my-work
+    {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        
+
+    }
+
+    .work1{
+        display: flex;
+        width: 97%;
+        margin-top: 10px;
+        margin-right: 5px;
+        height: 200px;
+        /*border: 5px solid red; this was to check while creating*/
+    }
+
+    .project-desc, .project-desc2, .project-desc3{
+        font-size: 30px;
+    }
+
+    .work1, .work2, .work3{
+        
+        margin-bottom: 20px;
+    }
+
+
+    /* Adjusting CONTACT ME section on different screen */
+    .section-contact-me{
+        flex-direction: column;
+        
+    }
+    
+    .contact-me{
+        
+        text-align:center;   
+        padding-right: 5px;
+        border-right: none;
+        border-bottom: 2px solid grey;
+        margin-bottom: 5px;
+    }
+    
+    .contact-me-options{
+        width: 99%;
+        padding: 0px 2px;
+        text-align: center;
+    }
+
+}
