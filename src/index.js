@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 // import './index.css';
 import './css/reset.css';
@@ -11,9 +11,15 @@ import MyWork from './components/mywork';
 import ContactMe from './components/contactme';
 import Footer from './components/footer'
 
+function DocTitle() {
+  useEffect(() => {
+    document.title = 'Professional Portfolio';
+  });
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <DocTitle />
     <App />
     <TopSection />
     <AboutMe />
